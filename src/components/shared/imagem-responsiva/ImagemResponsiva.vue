@@ -10,6 +10,6 @@ export default {
 
 <style lang="scss" scoped>
 .imagem-responsiva {
-  width: 100%;
+  width: 90%;
 }
 </style>

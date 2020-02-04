@@ -1,12 +1,5 @@
 <template>
-  <button
-    @click="disparaAcao()"
-    class="botao"
-    :class="estiloDoBotao"
-    :type="tipo"
-  >
-    {{ rotulo }}
-  </button>
+  <button @click="disparaAcao()" class="botao" :class="estiloDoBotao" :type="tipo">{{ rotulo }}</button>
 </template>
 
 <script>
@@ -48,14 +41,21 @@ export default {
 <style lang="scss" scoped>
 .botao {
   display: inline-block;
-  padding: 10px;
-  border-radius: 3px;
-  margin: 10px;
+  height: 35px;
+  width: 140px;
+  padding: 0 25px;
+  border: 0 solid white;
+  border-radius: 20px;
+  box-shadow: 0 0 0 0 white;
+  background-color: white;
   font-size: 1.2em;
+  color: white;
+  text-transform: uppercase;
+  margin: 10px 15px;
 }
 
 .botao-perigo {
-  background: firebrick;
+  background: #c72c41;
   color: white;
 }
 

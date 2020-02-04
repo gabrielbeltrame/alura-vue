@@ -12,11 +12,7 @@
     </label>
 
     <ul class="lista-fotos">
-      <li
-        class="lista-fotos-item"
-        v-for="foto of fotosComFiltro"
-        v-bind:key="foto._id"
-      >
+      <li class="lista-fotos-item" v-for="foto of fotosComFiltro" v-bind:key="foto._id">
         <meu-painel :titulo="foto.titulo">
           <imagem-responsiva :url="foto.url" :titulo="foto.titulo" />
           <meu-botao
@@ -46,7 +42,7 @@ export default {
 
   data() {
     return {
-      titulo: "Alurapic",
+      titulo: "Grid",
       fotos: [],
       filtro: ""
     };
