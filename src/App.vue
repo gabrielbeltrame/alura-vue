@@ -1,11 +1,28 @@
 <template>
   <div class="corpo">
-    <router-view/>
+    <meu-menu :rotas="routes"></meu-menu>
+
+    <transition name="pagina">
+      <router-view />
+    </transition>
   </div>
 </template>
 
 <script>
-export default {};
+import { routes } from "./routes";
+import Menu from "./components/shared/menu/Menu.vue";
+
+export default {
+  components: {
+    "meu-menu": Menu
+  },
+
+  data() {
+    return {
+      routes
+    };
+  }
+};
 </script>
 
 <style lang="scss">
@@ -13,5 +30,15 @@ export default {};
   font-family: "Courier New", Courier, monospace;
   width: 90%;
   margin: 0 auto;
+}
+
+.pagina-enter,
+.pagina-leave-active {
+  opacity: 0;
+}
+
+.pagina-enter-active,
+.pagina-leave-active {
+  transition: opacity 0.4s;
 }
 </style>
